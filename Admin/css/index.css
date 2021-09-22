@@ -1,0 +1,66 @@
+body{
+    height: auto;
+    width: auto;
+}
+
+.page-header{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-header h1 {
+    margin-left: 20px;
+}
+
+.page-note{
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    margin-left: 20%;
+    margin-right: 2%;
+    border-radius: .25rem
+}
+
+.page-info{
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb
+}
+
+.breadcrumb-size-text{
+    font-size: 20px;
+}
+
+.form-row-data{
+    margin-left: 400px;
+    margin-right: 100px;
+}
+
+.portlet {
+    width: 75%;
+    padding: 30px;
+    margin-left: 320px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+
+.portlet h1{
+    color: turquoise;
+    font-size: 30px;
+}
+
+.portlet label{
+    font-size: 15px;
+}
+
+.portlet .row{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
+}
