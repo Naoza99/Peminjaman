@@ -28,12 +28,12 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label>Nama Alat</label>
-                        <input type="text" class="form-control" id="Alat" placeholder="Nama Alat" name="Alat">
+                        <input type="text" class="form-control" id="AlatName" placeholder="Nama Alat" name="AlatName">
                     </div>
                     <div class="col-md-6">
                         <label>Nama Alat Category</label>
                         <Select class="form-control">
-                            <option value="Select Kondisi Alat">Select Kondisi Alat</option>
+                            <option value="Select Alat Category">Select Alat Category</option>
                             <?php
                                 $getAlatCategory = $alat->ShowAllAlatCategory();
                                 if($getAlatCategory){
