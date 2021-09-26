@@ -17,7 +17,7 @@
         public function laboratoriumInsert($data){
             $labName = mysqli_real_escape_string($this->db->link, $data['LaboratoriumName']);
             $labTelepon = mysqli_real_escape_string($this->db->link, $data['Telepon']);
-            $Address = mysqli_real_escape_string($this->db->link, $data['Address']);
+            $Address = mysqli_real_escape_string($this->db->link, $data['Alamat']);
             $Email = mysqli_real_escape_string($this->db->link, $data['Email']);
             $Profile = mysqli_real_escape_string($this->db->link, $data['Profile']);
             $Ketentuan = mysqli_real_escape_string($this->db->link, $data['Ketentuan']);
@@ -27,7 +27,7 @@
     			return $msg;
             }
             else{
-                $query = "INSERT INTO Laboratorium (Name, Phone, Address, Email, Profile, Ketentuan) VALUES ('$labName', '$labTelepon', '$Address', '$Email', '$Profile', '$Ketentuan')";
+                $query = "INSERT INTO laboratorium (Name, Phone, Address, Email, Profile, Ketentuan, CreatedAt) VALUES ('$labName', '$labTelepon', '$Address', '$Email', '$Profile', '$Ketentuan', CURRENT_TIMESTAMP)";
 
                 $inserted_row = $this->db->insert($query);
                 if ($inserted_row) {
@@ -38,6 +38,12 @@
                     return $msg;
                 } 
             }
+        }
+
+        public function ShowAllLab(){
+            $query = "SELECT * FROM laboratorium";
+            $result = $this->db->select($query);
+            return $result;
         }
     }
 ?>

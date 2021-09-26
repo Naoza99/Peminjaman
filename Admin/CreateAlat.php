@@ -2,8 +2,10 @@
     include "inc/header.php";
     include "inc/sidebar.php";
     include "../class/Alat.php";
+    include "../class/Laboratorium.php";
 
     $alat = new Alat();
+    $laboratorium = new Laboratorium();
 ?>
 
 <link rel="stylesheet" href="css/index.css">
@@ -84,9 +86,19 @@
                         <label>Lokasi Simpan</label>
                         <Select class="form-control">
                             <option value="Select Lokasi Simpan">Select Lokasi Simpan</option>
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
+                            <?php
+                                $getLokasiSimpan = $laboratorium->ShowAllLab();
+                                if($getLokasiSimpan){
+                                    $i = 0;
+                                    while($result = $getLokasiSimpan->fetch_assoc())
+                                    {
+                                        $i++;
+                            ?>
+                            <option value="<?php echo $result ['LaboratoriumId']?>"><?php echo $result ['Name']?></option>
+                            <?php
+                                    }
+                                }
+                            ?>
                         </Select>
                     </div>
                     <div class="col-md-6">
