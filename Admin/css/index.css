@@ -44,9 +44,9 @@ body{
 }
 
 .portlet {
-    width: 75%;
+    width: 97%;
     padding: 30px;
-    margin-left: 320px;
+    margin-left: 2%;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
 }

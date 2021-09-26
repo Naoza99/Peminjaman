@@ -4,7 +4,7 @@
         <div class="menu-list">
             <ul id="menu-content" class="menu-content collapse out">
                 <li>
-                    <a href="#">
+                    <a href="home.php">
                         <i class="fa fa-dashboard fa-lg"></i> Dashboard
                     </a>
                 </li>
