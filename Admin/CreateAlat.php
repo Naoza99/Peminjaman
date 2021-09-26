@@ -1,6 +1,9 @@
 <?php
     include "inc/header.php";
     include "inc/sidebar.php";
+    include "../class/Alat.php";
+
+    $alat = new Alat();
 ?>
 
 <link rel="stylesheet" href="css/index.css">
@@ -28,10 +31,20 @@
                     <div class="col-md-6">
                         <label>Nama Alat Category</label>
                         <Select class="form-control">
-                            <option value="Select Kondisi Alat">Sekect Kondisi Alat</option>
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
+                            <option value="Select Kondisi Alat">Select Kondisi Alat</option>
+                            <?php
+                                $getAlatCategory = $alat->ShowAllAlatCategory();
+                                if($getAlatCategory){
+                                    $i = 0;
+                                    while($result = $getAlatCategory->fetch_assoc())
+                                    {
+                                        $i++;
+                            ?>
+                            <option value="<?php echo $result ['AlatCategoryId']?>"><?php echo $result ['Name']?></option>
+                            <?php
+                                    }
+                                }
+                            ?>
                         </Select>
                     </div>
                 </div>
@@ -43,7 +56,22 @@
                     </div>
                     <div class="col-md-3">
                         <label>Satuan</label>
-                        <input type="text" class="form-control" placeholder="Satuan" name="Satuan">
+                        <Select class="form-control">
+                            <option value="Select Kondisi Alat">Select Satuan</option>
+                            <?php
+                                $getSatuan = $alat->ShowAllSatuan();
+                                if($getSatuan){
+                                    $i = 0;
+                                    while($result = $getSatuan->fetch_assoc())
+                                    {
+                                        $i++;
+                            ?>
+                            <option value="<?php echo $result ['SatuanId']?>"><?php echo $result ['Name']?></option>
+                            <?php
+                                    }
+                                }
+                            ?>
+                        </Select>
                     </div>
                     <div class="col-md-6">
                         <label>Tanggal masuk</label>

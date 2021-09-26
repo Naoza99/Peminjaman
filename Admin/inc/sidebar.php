@@ -1,3 +1,4 @@
+
 <div class="nav-side-menu">
     <div class="brand">Admin</div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
@@ -21,9 +22,8 @@
                     <a href="#"><i class="fa fa-globe fa-lg"></i> Data Laboratorium <span class="arrow"></span></a>
                 </li>  
                 <ul class="sub-menu collapse" id="Konfirmasi">
-                    <li>Trendmonitoring</li>
-                    <li>Alarmmonitoring</li>
-                    <li>Audit-Trail</li>
+                    <li><a href="CreateLaboratorium.php">Buat Baru</a></li>
+                    <li><a href="AllAlat.php">Semua Alat</a></li>
                 </ul>
                 <li data-toggle="collapse" data-target="#Penjadwalan" class="collapsed">
                     <a href="#"><i class="fa fa-car fa-lg"></i> Penjadwalan <span class="arrow"></span></a>
