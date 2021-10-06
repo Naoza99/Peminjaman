@@ -5,7 +5,7 @@
             <form class="login-form">
                 <input type="text" placeholder="username"/>
                 <input type="password" placeholder="password"/>
-                <button><a href="home.php">login</a></button>
+                <button class="btn-login-admin"><a href="home.php">login</a></button>
             </form>
         </div>
     </div>

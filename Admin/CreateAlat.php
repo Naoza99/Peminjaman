@@ -24,7 +24,7 @@
         <div class="portlet">
             <h1>Form Data</h1>
             <br>
-            <form>
+            <form action="" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-6">
                         <label>Nama Alat</label>
@@ -42,7 +42,7 @@
                                     {
                                         $i++;
                             ?>
-                            <option value="<?php echo $result ['AlatCategoryId']?>"><?php echo $result ['Name']?></option>
+                            <option value="<?php echo $result ['AlatCategoryId']?>" name="AlatCategoryId"><?php echo $result ['Name']?></option>
                             <?php
                                     }
                                 }
@@ -68,7 +68,7 @@
                                     {
                                         $i++;
                             ?>
-                            <option value="<?php echo $result ['SatuanId']?>"><?php echo $result ['Name']?></option>
+                            <option value="<?php echo $result ['SatuanId']?>" name="SatuanId"><?php echo $result ['Name']?></option>
                             <?php
                                     }
                                 }
@@ -94,7 +94,7 @@
                                     {
                                         $i++;
                             ?>
-                            <option value="<?php echo $result ['LaboratoriumId']?>"><?php echo $result ['Name']?></option>
+                            <option value="<?php echo $result ['LaboratoriumId']?>" name="LaboratoriumId"><?php echo $result ['Name']?></option>
                             <?php
                                     }
                                 }
@@ -104,10 +104,20 @@
                     <div class="col-md-6">
                         <label>Kondisi Alat</label>
                         <Select class="form-control">
-                            <option value="Sekect Kondisi Alat">Sekect Kondisi Alat</option>
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
+                            <option value="Select Kondisi Alat">Select Kondisi Alat</option>
+                            <?php
+                                $getKondisiAlat = $alat->ShowKondisiAlat();
+                                if($getKondisiAlat){
+                                    $i = 0;
+                                    while($result = $getKondisiAlat->fetch_assoc())
+                                    {
+                                        $i++;
+                            ?>
+                            <option value="<?php echo $result ['KondisiAlatId']?>" name="KondisiAlatId"><?php echo $result ['Name']?></option>
+                            <?php
+                                    }
+                                }
+                            ?>
                         </Select>
                     </div>
                 </div>
@@ -115,16 +125,25 @@
                 <div class="row">
                     <div class="col-md-12">
                         <label>Image Upload</label>
-                        <input type="file" class="form-control" id="customFile" />
+                        <input type="file" class="form-control" id="customFile" name="image"/>
                     </div>
                 </div>
                 <br>
                 <br>
                 <br>
                 <div class="row">
-                    <button type="submit" class="btn btn-primary col-md-2">Submit</button>
+                    <button type="submit" name="submit" class="btn btn-primary col-md-2">Submit</button>
                 </div>
             </form>
+            <?php
+                if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
+                    $insertAlat = $alat->AlatInsert($_POST, $_FILES);
+                }
+
+                if (isset($insertAlat)) {
+                    echo $insertAlat;
+                 }
+            ?>
             <br>
         </div>
     </div>
