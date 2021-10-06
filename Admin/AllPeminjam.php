@@ -10,16 +10,20 @@
 <body>
     <div class="page-view">
         <ul class="breadcrumb">
-            <li class="breadcrumb-size-text"><a class="breadcrumb-item active" href="home.php">Dashboard</a><a class="breadcrumb-item active" href="AllAlat.php">Alat</a><span class="breadcrumb-item active">Semua</span></li>
+            <li class="breadcrumb-size-text">
+                <a class="breadcrumb-item active" href="home.php">Dashboard</a>
+                <a class="breadcrumb-item active" href="AllAlat.php">Konfirmasi</a>
+                <span class="breadcrumb-item active">Peminjaman</span>
+            </li>
         </ul>
         <hr>
 
         <div class="page-header">
-            <h1>Data Alat</h1>
+            <h1>Daftar Peminjam</h1>
         </div>
 
         <div class="portlet">
-            <h1>List Data</h1>
+            <h1>List Peminjam</h1>
             <br>
 
             <div class="row">
@@ -39,21 +43,17 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th scope="col">Id</th>
                         <th scope="col">Nama</th>
-                        <th scope="col">Nama Alat Category</th>
-                        <th scope="col">Jumlah</th>
-                        <th scope="col">Satuan</th>
-                        <th scope="col">Tanggal masuk</th>
-                        <th scope="col">Lokasi Simpan</th>
-                        <th scope="col">Kondisi Alat</th>
+                        <th scope="col">Alat</th>
+                        <th scope="col">Peminjaman</th>
+                        <th scope="col">Pengembalian</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">Dummy Nama</td>
-                        <td>Dummy</td>
-                        <td>Dummy</td>
                         <td>Dummy</td>
                         <td>Dummy</td>
                         <td>Dummy</td>

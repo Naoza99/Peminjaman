@@ -1,4 +1,3 @@
-
 <div class="nav-side-menu">
     <div class="brand">Admin</div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
@@ -18,10 +17,10 @@
                     <li><a href="CreateAlat.php">Buat Baru</a></li>
                     <li><a href="AllAlat.php">Semua Alat</a></li>
                 </ul>
-                <li data-toggle="collapse" data-target="#Konfirmasi" class="collapsed">
+                <li data-toggle="collapse" data-target="#Laboratorium" class="collapsed">
                     <a href="#"><i class="fa fa-globe fa-lg"></i> Data Laboratorium <span class="arrow"></span></a>
                 </li>  
-                <ul class="sub-menu collapse" id="Konfirmasi">
+                <ul class="sub-menu collapse" id="Laboratorium">
                     <li><a href="CreateLaboratorium.php">Buat Baru</a></li>
                     <li><a href="AllAlat.php">Semua Alat</a></li>
                 </ul>
@@ -29,27 +28,27 @@
                     <a href="#"><i class="fa fa-car fa-lg"></i> Penjadwalan <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="Penjadwalan">
-                    <li>Alarmstatistik</li>
-                    <li>Prozessfähigkeit</li>
+                    <li><a href="Createjadwal.php">Create Jadwal</a></li>
+                    <li>Lihat Jadwal</li>
                 </ul>
                 <li>
                     <a href="#">
                         <i class="fa fa-user fa-lg"></i> Reporting
                     </a>
                 </li>
-                <li data-toggle="collapse" data-target="#Service" class="collapsed">
-                    <a href="#"><i class="fa fa-car fa-lg"></i> Service <span class="arrow"></span></a>
+                <li data-toggle="collapse" data-target="#Konfirmasi" class="collapsed">
+                    <a href="#"><i class="fa fa-car fa-lg"></i> Konfirmasi <span class="arrow"></span></a>
                 </li>
-                <ul class="sub-menu collapse" id="Service">
-                    <li>Sensorkonfiguration</li>
-                    <li>Betriebsarten</li>
+                <ul class="sub-menu collapse" id="Konfirmasi">
+                    <li><a href="AllPeminjam.php">Peminjaman</a></li>
+                    <li><a href="AllPengembalian.php">Pengembalian</a></li>
                 </ul>
                 <li data-toggle="collapse" data-target="#ManageUser" class="collapsed">
                     <a href="#"><i class="fa fa-car fa-lg"></i> Manage User <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="ManageUser">
-                    <li>Alarmstatistik</li>
-                    <li>Prozessfähigkeit</li>
+                    <li><a href="CreateUser.php">Create User</a></li>
+                    <li>Semua User</li>
                 </ul>
                 <li data-toggle="collapse" data-target="#WebSettings" class="collapsed">
                     <a href="#"><i class="fa fa-car fa-lg"></i> Web Settings <span class="arrow"></span></a>
@@ -66,12 +65,3 @@
             </ul>
     </div>
 </div>
-
-<script type="text/javascript">
-    $(document).ready(function()
-    {
-        $('#sub-menu').on('click', 'li a', function(e) {
-            alert($(this).text());                
-        });
-    });
-</script>
