@@ -1,4 +1,4 @@
-.header-ul{
+.header-ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -6,8 +6,8 @@
     overflow: hidden;
     background-color: #2e353d;
 }
- 
-.header-li{
+
+.header-li {
     float: left;
 }
 
@@ -17,12 +17,17 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
+}
+
 .header-li a:hover:not(.active) {
-    background-color: #111;
-  }
+    background-color: #FFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2e353d;
+}
 
 .header-active {
-background-color: #04AA6D;
+    background-color: #2e353d;
 }

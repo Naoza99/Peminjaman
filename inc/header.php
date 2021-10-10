@@ -17,6 +17,9 @@
                     <a href="#" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item active">
+                    <a href="labProfile.php" class="nav-link">Laboratorium</a>
+                </li>
+                <li class="nav-item active">
                     <a href="#" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item active">
