@@ -26,7 +26,7 @@
         <li class="header-li"><a href="#home">Home</a></li>
         <li class="header-li"><a href="#news">News</a></li>
         <li class="header-li"><a href="#contact">Contact</a></li>
-        <li class ="header-li" style="float:right"><a class="header-active" href="#about">About</a></li>
+        <li class ="header-li" style="float:right"><a class="header-active">Logout</a></li>
     </ul>
 </body>
 </html>
