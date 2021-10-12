@@ -8,7 +8,7 @@
     <div class="page-view">
         <div class="list">
             <br>
-            <span class="text-title">Laboratorium</span>
+            <span class="text-title"><a href="DetailLab.php">Laboratorium</a></span>
             <br>
             <div class="search-content">
                 <div class="content-name">
