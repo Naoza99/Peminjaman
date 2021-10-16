@@ -21,22 +21,22 @@
     
         public static function checkSession(){
             self::init();
-            if (self::get("adminlogin") == false) {
+            if (self::get("adminLogin") == false) {
                 self::destroy();
-                header("Location:login.php");
+                header("Location:index.php");
             }
         }
 
         public static function checkLogin(){
             self::init();
-            if (self::get("adminlogin") == true) {
+            if (self::get("adminLogin") == true) {
                 header("Location:home.php");
             }
         }
 
         public static function destroy(){
             session_destroy();
-            header("Location:login.php");
+            header("Location:index.php");
         }
     }
 ?>
