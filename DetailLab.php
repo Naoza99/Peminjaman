@@ -56,12 +56,6 @@
                 <div class="page-title">
                     <span>Laboratorium</span>
                 </div>
-                <br>
-                <div class="body-content">
-                    <div class="tab-content">
-                        <button class=""></button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

@@ -35,11 +35,11 @@
 
         public function AlatInsert($data, $file){
             $AlatName = mysqli_real_escape_string($this->db->link, $data['AlatName']);
-            $KategoriALat = mysqli_real_escape_string($this->db->link, $data['AlatCategoryId']);
+            $AlatCategoryId = mysqli_real_escape_string($this->db->link, $data['AlatCategoryId']);
             $Jumlah = mysqli_real_escape_string($this->db->link, $data['Jumlah']);
             $Satuan = mysqli_real_escape_string($this->db->link, $data['SatuanId']);
-            $TanggalMasuk = mysqli_real_escape_string($this->db->link, $data['TanggalMasuk']);
-            $LokasiSimpan = mysqli_real_escape_string($this->db->link, $data['LokasiSimpan']);
+            $datepicker = mysqli_real_escape_string($this->db->link, $data['datepicker']);
+            $LaboratoriumId = mysqli_real_escape_string($this->db->link, $data['LaboratoriumId']);
             $KondisiAlat = mysqli_real_escape_string($this->db->link, $data['KondisiAlatId']);
 
             $permited = array('jpg','png','jpeg','gif');
@@ -54,13 +54,13 @@
 
             move_uploaded_file($file_temp, $uploaded_image);
             $query = "INSERT INTO Alat (Name, AlatCategoryId, Jumlah, SatuanId, TanggalMasuk, LokasiSimpanId, KondisiALatId, Image, CreatedAt) 
-            VALUES ('$AlatName', '$KategoriALat', '$Jumlah', '$Satuan', '$TanggalMasuk', '$LokasiSimpan', '$KondisiAlat', '$uploaded_image', CURRENT_TIMESTAMP)";
+            VALUES ('$AlatName', '$AlatCategoryId', '$Jumlah', '$Satuan', '$datepicker', '$LaboratoriumId', '$KondisiAlat', '$uploaded_image', CURRENT_TIMESTAMP)";
             $insert = $this->db->insert($query);
             if ($insert) {
-    			$msg = "<span class='success'>Product Inserted Successfully.</span> ";
+    			$msg = "Product Inserted Successfully.";
     			return $msg;
     		}else {
-    			$msg = "<span class='error'>Product Not Inserted .</span> ";
+    			$msg = "Product not Inserted";
     			return $msg;
     		} 
         }
