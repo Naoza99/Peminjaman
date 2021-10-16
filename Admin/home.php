@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/index.css">
 <body>
     <div class="page-view">
-        <ul class="breadcrumb">
+        <ul class="breadcrumb header-text">
             <li>Dashboard</li>
         </ul>
         <hr>
@@ -19,6 +19,7 @@
         <div class="page-note page-info">
             <h3>Selamat datang di E-Peminjaman - Peminjaman Elektronik Alat & Laboratorium</h3>
         </div>
+        <br>
         <br>
         <br>
         <br>

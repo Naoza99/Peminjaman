@@ -12,6 +12,12 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/footer-style.css">
 
+<?php
+    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
+        $insertAlat = $alat->AlatInsert($_POST, $_FILES);
+    }
+?>
+
 <body>
     <div class="page-view">
         <ul class="breadcrumb">
@@ -32,7 +38,7 @@
                     </div>
                     <div class="col-md-6">
                         <label>Nama Alat Category</label>
-                        <Select class="form-control">
+                        <Select class="form-control" name="AlatCategoryId">
                             <option value="Select Alat Category">Select Alat Category</option>
                             <?php
                                 $getAlatCategory = $alat->ShowAllAlatCategory();
@@ -42,7 +48,7 @@
                                     {
                                         $i++;
                             ?>
-                            <option value="<?php echo $result ['AlatCategoryId']?>" name="AlatCategoryId"><?php echo $result ['Name']?></option>
+                            <option value="<?php echo $result ['AlatCategoryId'];?>"><?php echo $result ['Name'];?></option>
                             <?php
                                     }
                                 }
@@ -58,7 +64,7 @@
                     </div>
                     <div class="col-md-3">
                         <label>Satuan</label>
-                        <Select class="form-control">
+                        <Select class="form-control" name="SatuanId">
                             <option value="Select Kondisi Alat">Select Satuan</option>
                             <?php
                                 $getSatuan = $alat->ShowAllSatuan();
@@ -77,14 +83,14 @@
                     </div>
                     <div class="col-md-6">
                         <label>Tanggal masuk</label>
-                        <input class="datepicker form-control" data-provide="datepicker" id="datepicker">
+                        <input class="datepicker form-control" data-provide="datepicker" id="datepicker" name="datepicker">
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-md-6">
                         <label>Lokasi Simpan</label>
-                        <Select class="form-control">
+                        <Select class="form-control" name="LaboratoriumId">
                             <option value="Select Lokasi Simpan">Select Lokasi Simpan</option>
                             <?php
                                 $getLokasiSimpan = $laboratorium->ShowAllLab();
@@ -103,7 +109,7 @@
                     </div>
                     <div class="col-md-6">
                         <label>Kondisi Alat</label>
-                        <Select class="form-control">
+                        <Select class="form-control" name="KondisiAlatId">
                             <option value="Select Kondisi Alat">Select Kondisi Alat</option>
                             <?php
                                 $getKondisiAlat = $alat->ShowKondisiAlat();
@@ -135,18 +141,17 @@
                     <button type="submit" name="submit" class="btn btn-primary col-md-2">Submit</button>
                 </div>
             </form>
-            <?php
-                if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
-                    $insertAlat = $alat->AlatInsert($_POST, $_FILES);
-                }
-
-                if (isset($insertAlat)) {
-                    echo $insertAlat;
-                 }
-            ?>
             <br>
+            <span>
+                <?php
+                    if (isset($insertAlat)) {
+                        echo $insertAlat;
+                    }
+                ?>
+            </span>
         </div>
     </div>
+    <br>
     <br>
     <br>
     <br>

@@ -1,3 +1,7 @@
+<?php 
+    include '../lib/Session.php';
+    Session::checkSession();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,11 +26,15 @@
     <link rel="stylesheet" href="css/header-style.css">
 </head>
 <body>
+    <?php 
+        if (isset($_GET['action']) && $_GET['action'] == "logout") {
+            Session::destroy();
+        }
+    ?>
     <ul class="header-ul">
-        <li class="header-li"><a href="#home">Home</a></li>
-        <li class="header-li"><a href="#news">News</a></li>
-        <li class="header-li"><a href="#contact">Contact</a></li>
-        <li class ="header-li" style="float:right"><a class="header-active">Logout</a></li>
+        <li class ="header-li"><a href="/../index.php">Website</a></li>
+        <li class ="header-li" style="float:right"><a href="?action=logout">Logout</a></li>
+        <li class ="header-li" style="float:right"><span><?php echo Session::get('adminUser');?></li></span>
     </ul>
 </body>
 </html>

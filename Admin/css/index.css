@@ -36,6 +36,12 @@ body{
 
 .breadcrumb-size-text{
     font-size: 20px;
+    margin-bottom: -20px;
+}
+
+.header-text{
+    font-size: 18px;
+    margin-bottom: -10px;
 }
 
 .form-row-data{

@@ -2,8 +2,6 @@
     include "inc/header.php";
 ?>
 
-<link rel="stylesheet" href="css/index.css">
-
 <body>
     <div class="page-view">
         <div class="list">
