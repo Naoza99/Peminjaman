@@ -158,9 +158,9 @@
     <br>
 </body>
 
-<?php
+<!-- <?php
     include "inc/footer.php";
-?>
+?> -->
 
 <script type="text/javascript">
     $(document).ready(function(){
