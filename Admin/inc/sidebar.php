@@ -48,7 +48,7 @@
                 </li>
                 <ul class="sub-menu collapse" id="ManageUser">
                     <li><a href="CreateUser.php">Create User</a></li>
-                    <li>Semua User</li>
+                    <li><a href="AllUser.php">Semua User</a></li>
                 </ul>
                 <li data-toggle="collapse" data-target="#WebSettings" class="collapsed">
                     <a href="#"><i class="fa fa-car fa-lg"></i> Web Settings <span class="arrow"></span></a>
