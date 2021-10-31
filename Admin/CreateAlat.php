@@ -48,7 +48,7 @@
                                     {
                                         $i++;
                             ?>
-                            <option value="<?php echo $result ['AlatCategoryId'];?>"><?php echo $result ['Name'];?></option>
+                            <option value="<?php echo $result ['AlatCategoryId'];?>"><?php echo $result ['AlatCategoryName'];?></option>
                             <?php
                                     }
                                 }
@@ -74,7 +74,7 @@
                                     {
                                         $i++;
                             ?>
-                            <option value="<?php echo $result ['SatuanId']?>" name="SatuanId"><?php echo $result ['Name']?></option>
+                            <option value="<?php echo $result ['SatuanId']?>" name="SatuanId"><?php echo $result ['SatuanName']?></option>
                             <?php
                                     }
                                 }
@@ -100,7 +100,7 @@
                                     {
                                         $i++;
                             ?>
-                            <option value="<?php echo $result ['LaboratoriumId']?>" name="LaboratoriumId"><?php echo $result ['Name']?></option>
+                            <option value="<?php echo $result ['LaboratoriumId']?>" name="LaboratoriumId"><?php echo $result ['LaboratoriumName']?></option>
                             <?php
                                     }
                                 }

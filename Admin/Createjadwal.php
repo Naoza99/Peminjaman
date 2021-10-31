@@ -49,7 +49,7 @@
                                     {
                                         $i++;
                             ?>
-                            <option value="<?php echo $result ['LaboratoriumId']?>" name="LaboratoriumId"><?php echo $result ['Name']?></option>
+                            <option value="<?php echo $result ['LaboratoriumId'];?>" name="LaboratoriumId"><?php echo $result ['LaboratoriumName'];?></option>
                             <?php
                                     }
                                 }
