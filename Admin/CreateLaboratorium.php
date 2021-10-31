@@ -150,9 +150,9 @@
             <br>
         </div>
     </div>
-    <div class="footer-style">
+    <!-- <div class="footer-style">
         <span>2021 &copy; by E-Peminjaman</span>
-    </div>
+    </div> -->
 </body>
 
 <script type="text/javascript">

@@ -65,9 +65,9 @@
             <br>
         </div>
     </div>
-    <div class="footer-style" style="margin-top: 271px;">
+    <!-- <div class="footer-style" style="margin-top: 271px;">
         <span>2021 &copy; by E-Peminjaman</span>
-    </div>
+    </div> -->
 </body>
 
 <script type="text/javascript">
